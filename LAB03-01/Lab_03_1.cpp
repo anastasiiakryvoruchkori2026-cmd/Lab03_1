@@ -28,9 +28,30 @@ int main() {
 		B = 2 * log10(1 - (x / 4));
 
 	if (x >= 3)
-		B = cos(abc(x)) + 3;
+		B = cos(abs(x)) + 3;
+
+	y = A - B;
+
+	cout << endl;
+	cout << "1) y = " << y << endl;
 
 
+	// розгалуження в повній формі
 
+	if (x < -1)
+		B = sqrt(2) * pow(x, 3) - 7;
+	else
+		if (x >= -1 && x < 3)
+			B = 2 * log10(1 - (x / 4));
+		else
+			B = cos(abs(x)) + 3;
+
+	y = A - B;
+
+	cout << endl;
+	cout << "2) y = " << y << endl;
+
+	cin.get();
+	return 0;
 
 }
